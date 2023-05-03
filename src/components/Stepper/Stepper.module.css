@@ -1,0 +1,78 @@
+.stepperContainer {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   position: relative;
+   z-index: 1;
+}
+
+.stepperItem {
+   display: flex;
+   align-items: center;
+   position: relative;
+   z-index: 1;
+   margin-bottom: 30px;
+   flex: 1;
+   color: #5f6d7e;
+}
+
+.stepperItem:last-child {
+   flex: 0;
+}
+
+.stepperItem:not(:last-child)::after {
+   content: '';
+   flex: 1;
+   border-top: 3.2px dotted var(--border-color);
+}
+
+.stepperItemCompleted:not(:last-child)::after {
+   border-top: 3.2px dotted #648ef7;
+}
+
+.stepperItemActive {
+   color: #648ef7;
+}
+
+.stepperItemActive > .stepperItemIcon {
+   border: 1px solid #648ef7;
+   color: #648ef7;
+}
+
+.stepperItemCompleted > .stepperItemIcon {
+   border: 1px solid #648ef7;
+   color: #fff;
+   background-color: #648ef7;
+}
+
+.stepperItemCompleted {
+   color: #648ef7;
+}
+
+.stepperItemActive > .stepperItemIcon > svg > path {
+   stroke: #648ef7;
+}
+
+.stepperItemCompleted > .stepperItemIcon > svg > path {
+   stroke: #fff;
+}
+
+.stepperItemIcon {
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   border: 1px solid #dae0e6;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.stepperItem > h2 {
+   font-size: 14px;
+   font-weight: 600;
+   margin-left: 15px;
+   position: absolute;
+   transform: translateX(-50%);
+   margin-top: 60px;
+}

@@ -1,0 +1,26 @@
+.container {
+   padding: 0 48px;
+   padding-top: 32px;
+}
+
+.checkbox {
+   color: var(--text-color-light);
+}
+
+.checkbox:hover {
+   color: var(--text-color);
+}
+
+.checkboxLabel {
+   font-size: 14px;
+   font-weight: 500;
+   line-height: 24px;
+   text-align: left;
+   color: var(--text-color);
+}
+
+@media screen and (max-width: 768px) {
+   .container {
+      padding: 0 24px;
+   }
+}

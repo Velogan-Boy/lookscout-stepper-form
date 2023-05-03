@@ -1,0 +1,57 @@
+.formGroup {
+   display: flex;
+   flex-direction: column;
+   font-weight: 500;
+   color: var(--text-color);
+   width: 100%;
+   position: relative;
+}
+
+.formGroup > label {
+   font-size: 14px;
+   font-weight: 500;
+   margin-bottom: 10px;
+}
+
+.formGroup > input {
+   height: 40px;
+   border-radius: 5px;
+   border: 1px solid var(--border-color);
+   padding: 12px 16px;
+   font-size: 15px;
+   font-weight: 500;
+   box-shadow: 0px 1px 2px var(--box-shadow-color);
+   background-color: var(--background-color-lighter);
+   color: var(--text-color);
+}
+
+.formGroup > input:focus {
+   outline: none;
+   border: 1px solid var(--border-color);
+}
+
+.formGroup > input::placeholder {
+   font-size: 14px;
+   font-weight: 400;
+   color: var(--text-color);
+}
+
+.formGroup > p {
+   font-size: 12px;
+   font-weight: 400;
+   color: var(--text-color-light);
+   margin-top: 8px;
+}
+
+.ibtn {
+   position: absolute;
+   right: 0;
+   top: 50%;
+   transform: translate(-50%, -40%);
+   cursor: pointer;
+}
+
+.ibtn:hover > svg > path {
+   stroke: var(--text-color);
+   
+}
