@@ -5,21 +5,26 @@ import FormGroup from '../FormGroup/FormGroup';
 
 import styles from './FormStep.module.css';
 
-function FormStep({ step }) {
+function FormStep({ step, user, setUser }) {
+   function setValue(e) {
+      
+      setUser({ ...user, [e.target.name]: e.target.value });
+   }
+
    return (
       <>
          <Grid container spacing={2} className={styles.container}>
             <Grid item xs={12} sm={12} md={12}>
-               <FormGroup name={'Name'} placeholder={'Enter your name'} isRequired={false} errorMsg={'Please enter real name'} />
+               <FormGroup name={'name'} placeholder={'Enter your name'} isRequired={false} errorMsg={'Please enter real name'} setValue={setValue} />
             </Grid>
             <Grid item xs={12} sm={12} md={12}>
-               <FormGroup name={'Email'} placeholder={'Enter your email'} isRequired={true} errorMsg={'Please enter real email'} />
+               <FormGroup name={'email'} placeholder={'Enter your email'} isRequired={true} errorMsg={'Please enter real email'} setValue={setValue} />
             </Grid>
             <Grid item xs={12} sm={12} md={6}>
-               <FormGroup name={'Password'} placeholder={'Enter your password'} isRequired={true} errorMsg={'Please enter real password'} />
+               <FormGroup name={'password'} placeholder={'Enter your password'} isRequired={true} errorMsg={'Please enter real password'} setValue={setValue} />
             </Grid>
             <Grid item xs={12} sm={12} md={6}>
-               <FormGroup name={'Confirm Password'} placeholder={'Confirm your password'} isRequired={true} errorMsg={'Please enter real password'} />
+               <FormGroup name={'confirmPassword'} placeholder={'Confirm your password'} isRequired={true} errorMsg={'Please enter real password'} setValue={setValue} />
             </Grid>
 
             <Grid item xs={12} sm={12} md={12}>

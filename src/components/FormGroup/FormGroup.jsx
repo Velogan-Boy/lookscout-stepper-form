@@ -4,7 +4,7 @@ import { ReactComponent as InfoBtn } from '../../assets/images/info.svg';
 
 import styles from './FormGroup.module.css';
 
-function FormGroup({ type, name, placeholder, isRequired, errorMsg }) {
+function FormGroup({ type, name, placeholder, isRequired, errorMsg, setValue }) {
    const [display, setDisplay] = useState(false);
 
    return (
@@ -13,7 +13,7 @@ function FormGroup({ type, name, placeholder, isRequired, errorMsg }) {
             {name[0].toUpperCase() + name.slice(1)}
             {isRequired && '*'}
          </label>
-         <input type={type} id={name} name={name} placeholder={placeholder} />
+         <input type={type} id={name} name={name} placeholder={placeholder} onChange={setValue} />
          <span className={styles.ibtn} onClick={() => setDisplay(!display)}>
             <InfoBtn />
          </span>
